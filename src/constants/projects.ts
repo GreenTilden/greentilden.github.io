@@ -37,6 +37,66 @@ export const PROJECT_FILTERS: ProjectFilter[] = [
 
 export const PROJECT_DATA: Project[] = [
   {
+    title: 'Homelab Infrastructure Cluster',
+    subtitle: 'Self-Hosted Cloud Platform',
+    description: 'Two-node Proxmox cluster running 20+ containerized services with SSO, monitoring, VPN, and GPU-accelerated AI inference. Full infrastructure-as-code approach with automated backups and ZFS storage.',
+    image: null,
+    media: [],
+    technologies: ['Proxmox', 'Docker', 'Nginx', 'ZFS', 'Authelia', 'n8n'],
+    achievements: [
+      '20+ services across LXC containers and Docker',
+      'SSO authentication with Authelia OIDC',
+      'GPU passthrough for AI inference workloads',
+      'Automated monitoring and alerting with Uptime Kuma'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['software', 'personal'],
+    featured: true,
+    year: 2025
+  },
+  {
+    title: 'Diller Queen',
+    subtitle: 'Browser Arcade Game',
+    description: 'Playable 4v4 multiplayer browser arcade game inspired by Killer Queen. Custom game engine with server-authoritative physics, WebSocket networking, and pixel art sprites.',
+    image: null,
+    media: [],
+    technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Game Design'],
+    achievements: [
+      'Custom game engine with server-authoritative state',
+      'Real-time multiplayer via WebSockets',
+      'Original pixel art character sprites and animations',
+      'Three simultaneous win conditions'
+    ],
+    github: null,
+    externalLink: 'https://dq.darrenarney.com',
+    demoType: 'interactive',
+    categories: ['software', 'personal'],
+    featured: true,
+    year: 2025
+  },
+  {
+    title: 'Retro Dashboard',
+    subtitle: 'Smart Home Control Center',
+    description: 'Vue 3 + TypeScript dashboard with Flask backend for smart home control, baby monitor streaming, calendar integration, and freezer meal planning with Tandoor recipes.',
+    image: null,
+    media: [],
+    technologies: ['Vue 3', 'TypeScript', 'Flask', 'Python', 'Home Assistant'],
+    achievements: [
+      'Real-time smart home control via Home Assistant API',
+      'Dual baby monitor HLS streaming proxy',
+      'Freezer meal planning with recipe management',
+      'CalDAV calendar and daily journal integration'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['software', 'personal'],
+    featured: false,
+    year: 2026
+  },
+  {
     title: 'EllaBirdCam',
     subtitle: 'The Great Door Mystery',
     description: 'Motion-controlled camera system to solve how my dog Ella was mysteriously opening a closed door. Used open-source camera software with motion detection to catch the culprit in action.',

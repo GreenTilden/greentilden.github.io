@@ -182,7 +182,11 @@ export default {
         },
         {
           category: 'Programming & Scripting',
-          skills: ['C#', 'Python', 'GitHub', 'Automation Documentation']
+          skills: ['Python', 'C#', 'TypeScript', 'Vue.js', 'Flask', 'HTML5 Canvas']
+        },
+        {
+          category: 'Infrastructure',
+          skills: ['Docker', 'Proxmox', 'Nginx', 'Linux', 'ZFS', 'CI/CD']
         },
         {
           category: 'Workflow Development',
