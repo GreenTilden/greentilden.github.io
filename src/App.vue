@@ -7,7 +7,7 @@
             <div class="logo">
               <router-link to="/">
                 <h1 class="site-title">Darren Arney</h1>
-                <p class="tagline">Automation Professional</p>
+                <p class="tagline">AI Development &amp; Infrastructure</p>
               </router-link>
             </div>
             <div class="header-theme-selector">
@@ -45,8 +45,9 @@
                 <div class="mobile-menu-popout">
                   <ul class="nav-links mobile-links">
                     <li><router-link to="/" exact @click="closeMenu">Home</router-link></li>
-                    <li><router-link to="/demos" @click="closeMenu">Interactive Demos</router-link></li>
+                    <li><router-link to="/services" @click="closeMenu">Services</router-link></li>
                     <li><router-link to="/projects" @click="closeMenu">Projects</router-link></li>
+                    <li><router-link to="/demos" @click="closeMenu">Lab Demos</router-link></li>
                     <li><router-link to="/experience" @click="closeMenu">Experience</router-link></li>
                     <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
                   </ul>
@@ -55,8 +56,9 @@
             </div>
             <ul class="nav-links desktop-links">
               <li><router-link to="/" exact>Home</router-link></li>
-              <li><router-link to="/demos">Interactive Demos</router-link></li>
+              <li><router-link to="/services">Services</router-link></li>
               <li><router-link to="/projects">Projects</router-link></li>
+              <li><router-link to="/demos">Lab Demos</router-link></li>
               <li><router-link to="/experience">Experience</router-link></li>
               <li><router-link to="/contact">Contact</router-link></li>
             </ul>

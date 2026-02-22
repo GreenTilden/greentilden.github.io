@@ -30,21 +30,100 @@ export interface ProjectFilter {
 
 export const PROJECT_FILTERS: ProjectFilter[] = [
   { label: 'All Projects', value: 'all' },
-  { label: 'Automation', value: 'automation' },
-  { label: 'Software', value: 'software' },
-  { label: 'Personal', value: 'personal' }
+  { label: 'AI & Data', value: 'ai' },
+  { label: 'Infrastructure', value: 'infrastructure' },
+  { label: 'Games', value: 'games' },
+  { label: 'Lab Automation', value: 'automation' },
+  { label: 'Software', value: 'software' }
 ]
 
 export const PROJECT_DATA: Project[] = [
   {
+    title: 'Homelab Production Cluster',
+    subtitle: 'Self-Hosted Infrastructure',
+    description: 'Two-node Proxmox cluster running 20+ production services including Nextcloud, Immich, n8n, and custom dashboards. Full SSO via Authelia, automated monitoring with Uptime Kuma, reverse proxy with nginx, VPN via Headscale, and ZFS-backed storage.',
+    image: null,
+    media: [],
+    technologies: ['Proxmox', 'Docker', 'Nginx', 'Authelia', 'ZFS', 'Headscale', 'n8n', 'Grafana'],
+    achievements: [
+      '20+ production services with 99.9% uptime',
+      'Full SSO and VPN access across all services',
+      'Automated monitoring, alerting, and backup pipelines',
+      'GPU-accelerated AI inference with RTX 5070 Ti'
+    ],
+    github: null,
+    demoType: 'gallery',
+    categories: ['infrastructure', 'ai'],
+    featured: true,
+    year: 2025
+  },
+  {
+    title: 'AI-Powered RAG Pipeline',
+    subtitle: 'Document Intelligence',
+    description: 'Production retrieval-augmented generation system that turns document collections into searchable, queryable knowledge bases. Self-hosted vector databases, embedding models, and LLM integration — all running on local GPU hardware.',
+    image: null,
+    media: [],
+    technologies: ['Python', 'Vector DB', 'LLM', 'n8n', 'Docker', 'RTX 5070 Ti'],
+    achievements: [
+      'End-to-end RAG pipeline from document ingestion to chat interface',
+      'Self-hosted inference on local GPU — no cloud API costs',
+      'Privacy-first architecture for sensitive document handling',
+      'Automated workflow orchestration via n8n'
+    ],
+    github: null,
+    demoType: 'gallery',
+    categories: ['ai', 'software'],
+    featured: true,
+    year: 2026
+  },
+  {
+    title: 'Diller Queen',
+    subtitle: 'Browser Game',
+    description: 'Fully playable browser-based arcade game built as a showcase for custom promotional game development. Demonstrates the kind of branded, interactive experiences that can be built for businesses and events.',
+    image: null,
+    media: [],
+    technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Game Design'],
+    achievements: [
+      'Complete game loop with scoring and progression',
+      'Mobile-responsive touch controls',
+      'Proof of concept for branded promotional games',
+      'Fast load times — no heavy frameworks'
+    ],
+    github: null,
+    externalLink: 'https://greentilden.github.io/diller-queen/',
+    demoType: 'interactive',
+    categories: ['games', 'software'],
+    featured: true,
+    year: 2025
+  },
+  {
+    title: 'Vue Dashboard & Command Server',
+    subtitle: 'Full-Stack Application',
+    description: 'Custom Vue 3 + TypeScript dashboard with a Flask command server backend. Integrates Home Assistant, baby monitor feeds, calendar data, recipe management, and smart home controls into a unified interface.',
+    image: null,
+    media: [],
+    technologies: ['Vue 3', 'TypeScript', 'Flask', 'Python', 'Nginx', 'Home Assistant'],
+    achievements: [
+      'Real-time smart home control and monitoring',
+      'Dual baby monitor video streaming',
+      'CalDAV integration with Nextcloud',
+      'RESTful API with token authentication'
+    ],
+    github: null,
+    demoType: 'gallery',
+    categories: ['software', 'infrastructure'],
+    featured: true,
+    year: 2026
+  },
+  {
     title: 'EllaBirdCam',
     subtitle: 'The Great Door Mystery',
     description: 'Motion-controlled camera system to solve how my dog Ella was mysteriously opening a closed door. Used open-source camera software with motion detection to catch the culprit in action.',
-    image: null, // Will be video thumbnail
+    image: null,
     media: [
       {
         type: 'video',
-        url: '/videos/ella-door-mystery.mp4', // Placeholder for your video
+        url: '/videos/ella-door-mystery.mp4',
         caption: 'Ella caught in the act of opening the door',
         thumbnail: '/images/ella-thumbnail.jpg'
       }
@@ -58,8 +137,8 @@ export const PROJECT_DATA: Project[] = [
     github: null,
     demo: '/demos/ellabirdcam',
     demoType: 'video',
-    categories: ['software', 'personal'],
-    featured: true,
+    categories: ['software'],
+    featured: false,
     year: 2021
   },
   {
@@ -79,7 +158,7 @@ export const PROJECT_DATA: Project[] = [
     demo: '/demos/liquid-handler',
     demoType: 'interactive',
     categories: ['automation'],
-    featured: true,
+    featured: false,
     year: 2023
   },
   {
@@ -119,7 +198,7 @@ export const PROJECT_DATA: Project[] = [
     demo: '/demos/workflow',
     demoType: 'workflow',
     categories: ['automation', 'software'],
-    featured: true,
+    featured: false,
     year: 2023
   }
 ]

@@ -13,7 +13,7 @@ export default defineConfig({
       minify: true,
       inject: {
         data: {
-          title: 'Darren Arney - Automation Professional',
+          title: 'Darren Arney - AI Development & Infrastructure',
           favicon: '/favicon.png'
         }
       }

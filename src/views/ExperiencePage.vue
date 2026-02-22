@@ -177,20 +177,24 @@ export default {
       ],
       skills: [
         {
-          category: 'Automation Platforms',
+          category: 'AI & Data',
+          skills: ['RAG Pipelines', 'LLM Integration', 'Vector Databases', 'Embeddings', 'n8n Automation']
+        },
+        {
+          category: 'Infrastructure & DevOps',
+          skills: ['Proxmox', 'Docker', 'Nginx', 'ZFS', 'Linux Administration', 'CI/CD', 'Monitoring']
+        },
+        {
+          category: 'Development',
+          skills: ['Vue 3', 'TypeScript', 'Python', 'Flask', 'C#', 'HTML5 Canvas', 'REST APIs']
+        },
+        {
+          category: 'Lab Automation',
           skills: ['Green Button Go', 'Tecan', 'Biomek', 'Hamilton', 'Bravo']
         },
         {
-          category: 'Programming & Scripting',
-          skills: ['C#', 'Python', 'GitHub', 'Automation Documentation']
-        },
-        {
-          category: 'Workflow Development',
-          skills: ['Cell Line Development', 'DNA Extraction', 'Genotyping', 'High-throughput Screening']
-        },
-        {
-          category: 'Professional Skills',
-          skills: ['Team Leadership', 'Training & Mentoring', 'Process Optimization', 'Troubleshooting']
+          category: 'Professional',
+          skills: ['Team Leadership', 'Client Consulting', 'Technical Writing', 'Process Optimization']
         }
       ],
       certifications: [

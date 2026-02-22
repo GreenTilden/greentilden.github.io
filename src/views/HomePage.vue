@@ -6,18 +6,16 @@
         <section class="hero-section">
           <ParticlesCanvas />
           <div class="hero-content">
-            <h1 class="hero-title">Automation Excellence</h1>
-            <h2 class="hero-role">{{ currentRole }}</h2>
-            <p class="intro-paragraph">Leveraging over 10 years in laboratory automation designing, implementing, and optimizing scientific workflows for laboratories. </p>
-            <p class="intro-paragraph">My mission is to empower laboratories to achieve their goals through innovative solutions that enhance productivity, accuracy, 
-  and regulatory compliance.</p>
-            <p class="tagline">{{ currentTagline }}</p>
+            <h1 class="hero-title">Build Smarter. Ship Faster.</h1>
+            <h2 class="hero-role">AI Development &amp; Infrastructure Consulting</h2>
+            <p class="intro-paragraph">I build AI-powered tools, self-hosted infrastructure, and custom web applications for businesses that want to own their technology stack. Based in Indianapolis with 10+ years of automation and engineering experience.</p>
+            <p class="tagline">From RAG pipelines to branded browser games — practical solutions, not slide decks.</p>
             <el-space wrap alignment="center" class="cta-buttons">
-              <router-link to="/projects">
-                <el-button class="theme-button primary-button" type="primary" size="large">View Projects</el-button>
+              <router-link to="/services">
+                <el-button class="theme-button primary-button" type="primary" size="large">View Services</el-button>
               </router-link>
               <router-link to="/contact">
-                <el-button class="theme-button secondary-button" type="info" size="large">Contact Me</el-button>
+                <el-button class="theme-button secondary-button" type="info" size="large">Get In Touch</el-button>
               </router-link>
             </el-space>
           </div>
@@ -26,9 +24,9 @@
 
       <div class="section-divider"></div>
 
-      <!-- Areas of Expertise Section -->
-      <section v-if="sections.specialties" class="specialties-section">
-        <h2 class="section-heading expertise-heading">Areas of Expertise</h2>
+      <!-- Services Overview Section -->
+      <section class="specialties-section">
+        <h2 class="section-heading expertise-heading">What I Do</h2>
         <div class="expertise-grid">
           <div
             v-for="(specialty, index) in specialties"
@@ -45,6 +43,11 @@
               <p>{{ specialty.description }}</p>
             </div>
           </div>
+        </div>
+        <div class="section-cta">
+          <router-link to="/services">
+            <el-button class="theme-button primary-button" type="primary" size="large">See Full Service Details</el-button>
+          </router-link>
         </div>
       </section>
     </div>
@@ -65,85 +68,39 @@ export default {
   },
   data() {
     return {
-      viewType: this.$route.query.view || 'general',
       visibleCards: [],
-      roleConfigs: {
-        general: {
-          role: 'Laboratory Automation Specialist',
-          tagline: 'here is a tagline, maybe a different one for each theme?',
-          sections: { specialties: true },
-          specialties: [
-              {
-                title: 'Automation System Design',
-                description: 'Crafting and deploying tailored automation systems that meet the unique needs of laboratory environments, ensuring precision, scalability, and efficiency.',
-                icon: 'fas fa-robot'
-              },
-              {
-                title: 'Workflow Optimization',
-                description: 'Evaluating and streamlining existing processes to eliminate bottlenecks and introduce automation techniques that boost productivity and reliability.',
-                icon: 'fas fa-chart-line'
-              },
-              {
-                title: 'Technical Leadership',
-                description: 'Driving innovation and results by leading cross-disciplinary teams in the strategic development and execution of automation initiatives.',
-                icon: 'fas fa-users-cog'
-              },
-              {
-                title: 'Cross-functional Collaboration',
-                description: 'Facilitating seamless collaboration across engineering, marketing, and sales by mentoring, onboarding, and enabling cohesive teamwork.',
-                icon: 'fas fa-handshake'
-              }
-            ]
-          },
-        'ai-lead': {
-          role: 'AI Strategy & Laboratory Automation Leadership',
-          tagline: 'Bridging advanced automation expertise with emerging AI technologies',
-          sections: { specialties: true },
-          specialties: [
-            { title: 'AI Strategy Development', description: '...', icon: 'fas fa-brain' },
-            { title: 'Predictive Maintenance Systems', description: '...', icon: 'fas fa-chart-bar' },
-            { title: 'Workflow Intelligence', description: '...', icon: 'fas fa-network-wired' },
-            { title: 'Team Leadership & Transformation', description: '...', icon: 'fas fa-users' }
-          ]
+      specialties: [
+        {
+          title: 'AI & RAG Development',
+          description: 'Custom AI tools powered by retrieval-augmented generation. Document Q&A systems, intelligent search, and workflow automation — all self-hosted so your data stays yours.',
+          icon: 'fas fa-brain'
+        },
+        {
+          title: 'Infrastructure & DevOps',
+          description: 'Production-grade hosting, monitoring, and automation on infrastructure you control. Docker, Proxmox, CI/CD, and full-stack deployment without the cloud markup.',
+          icon: 'fas fa-server'
+        },
+        {
+          title: 'Custom Game Development',
+          description: 'Branded browser games for promotions, events, and customer engagement. A unique marketing channel that drives interaction and keeps customers coming back.',
+          icon: 'fas fa-gamepad'
+        },
+        {
+          title: 'Web Application Development',
+          description: 'Modern Vue.js dashboards, internal tools, and data-driven applications. From interactive demos to production business tools — clean code that scales.',
+          icon: 'fas fa-code'
         }
-      }
+      ]
     };
-  },
-  computed: {
-    currentConfig() {
-      return this.roleConfigs[this.viewType] || this.roleConfigs.general;
-    },
-    currentRole() {
-      return this.currentConfig.role;
-    },
-    currentTagline() {
-      return this.currentConfig.tagline;
-    },
-    sections() {
-      return this.currentConfig.sections;
-    },
-    specialties() {
-      return this.currentConfig.specialties;
-    }
   },
   methods: {
     onVisibilityChange(isVisible, index) {
       if (isVisible) this.visibleCards[index] = true;
     }
   },
-  watch: {
-    '$route.query.view'(newView) {
-      this.viewType = newView || 'general';
-    }
-  },
   mounted() {
-    this.viewType = this.$route.query.view || 'general';
-    if (this.specialties && Array.isArray(this.specialties)) {
-      this.visibleCards = new Array(this.specialties.length).fill(false);
-    }
-    // ParticlesCanvas component handles particles animation
-  },
-  // Animation cleanup handled by ParticlesCanvas component
+    this.visibleCards = new Array(this.specialties.length).fill(false);
+  }
 };
 </script>
 
@@ -340,6 +297,9 @@ body {
   overflow: hidden;
 }
 
+.section-cta {
+  margin-top: 2.5rem;
+}
 
 
 .expertise-heading {

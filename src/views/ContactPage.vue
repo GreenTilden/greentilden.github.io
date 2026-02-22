@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <h1>Contact</h1>
-        <p class="lead">Get in touch for opportunities or collaboration</p>
+        <p class="lead">Available for consulting, project work, and local IT services in the Indianapolis area</p>
       </header>
 
       <div class="contact-info">
