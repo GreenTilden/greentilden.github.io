@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <h1>Contact</h1>
-        <p class="lead">Get in touch for opportunities or collaboration</p>
+        <p class="lead">Get in touch for collaboration or community projects</p>
       </header>
 
       <div class="contact-info">

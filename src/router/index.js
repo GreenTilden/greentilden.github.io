@@ -18,6 +18,7 @@ const routes = [
   { path: '/demos/cell-imaging-scheduler', component: CellImagingSchedulerDemo },
   { path: '/demos/liquid-handler', component: LiquidHandlerVisualizer },
   { path: '/demos/workflow', component: WorkflowOptimizer },
+  { path: '/community', component: () => import('@/views/CommunityPage.vue') },
   { path: '/experience', component: Experience },
   { path: '/contact', component: Contact },
   { path: '/debug', component: ParticleDebug },

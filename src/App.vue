@@ -7,7 +7,7 @@
             <div class="logo">
               <router-link to="/">
                 <h1 class="site-title">Darren Arney</h1>
-                <p class="tagline">Automation Professional</p>
+                <p class="tagline">Automation & Community Tech</p>
               </router-link>
             </div>
             <div class="header-theme-selector">
@@ -47,6 +47,7 @@
                     <li><router-link to="/" exact @click="closeMenu">Home</router-link></li>
                     <li><router-link to="/demos" @click="closeMenu">Interactive Demos</router-link></li>
                     <li><router-link to="/projects" @click="closeMenu">Projects</router-link></li>
+                    <li><router-link to="/community" @click="closeMenu">Community</router-link></li>
                     <li><router-link to="/experience" @click="closeMenu">Experience</router-link></li>
                     <li><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
                   </ul>
@@ -57,6 +58,7 @@
               <li><router-link to="/" exact>Home</router-link></li>
               <li><router-link to="/demos">Interactive Demos</router-link></li>
               <li><router-link to="/projects">Projects</router-link></li>
+              <li><router-link to="/community">Community</router-link></li>
               <li><router-link to="/experience">Experience</router-link></li>
               <li><router-link to="/contact">Contact</router-link></li>
             </ul>
