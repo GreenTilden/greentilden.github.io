@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/HomePage.vue'
-import Services from '@/views/ServicesPage.vue'
 import Projects from '@/views/ProjectsPage.vue'
 import Demos from '@/views/DemosPage.vue'
 import Experience from '@/views/ExperiencePage.vue'
@@ -13,7 +12,6 @@ import WorkflowOptimizer from '@/components/demos/WorkflowOptimizer.vue'
 
 const routes = [
   { path: '/', component: Home, alias: '/DA-Portfolio/' },
-  { path: '/services', component: Services },
   { path: '/projects', component: Projects },
   { path: '/demos', component: Demos },
   { path: '/demos/ellabirdcam', component: EllaBirdCamDemo },

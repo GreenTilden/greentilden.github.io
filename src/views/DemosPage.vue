@@ -2,10 +2,10 @@
   <div class="demos-page">
     <div class="container">
       <header class="page-header">
-        <h1>Lab Automation Demos</h1>
+        <h1>Interactive Demos</h1>
         <p class="lead">
-          Interactive demonstrations from 10+ years of laboratory automation work —
-          liquid handling, instrument control, and workflow optimization.
+          Explore these interactive demonstrations of my work in laboratory automation, 
+          instrument control, and AI applications.
         </p>
       </header>
 
