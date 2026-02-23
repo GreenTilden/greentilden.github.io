@@ -158,6 +158,26 @@ export const PROJECT_DATA: Project[] = [
     year: 2026
   },
   {
+    title: 'Cathy Comics Bot',
+    subtitle: 'Automated Bluesky Social Media Bot',
+    description: 'Automated bot that scrapes classic Cathy comic strips, archives them by date, and posts them to Bluesky on a staggered daily schedule. Includes a web scraper with rate limiting, AT Protocol integration for social posting, and a dashboard widget with date navigation for browsing comic history.',
+    image: null,
+    media: [],
+    technologies: ['Python', 'AT Protocol', 'Playwright', 'BeautifulSoup', 'Flask', 'Docker'],
+    achievements: [
+      'Staggered 3x daily posting schedule with duplicate prevention',
+      'Headless browser scraping with batch rate limiting',
+      'AT Protocol integration for native Bluesky image embeds',
+      'Dashboard widget with multi-day history navigation'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['software', 'personal'],
+    featured: false,
+    year: 2026
+  },
+  {
     title: 'EllaBirdCam',
     subtitle: 'The Great Door Mystery',
     description: 'Motion-controlled camera system to solve how my dog Ella was mysteriously opening a closed door. Used open-source camera software with motion detection to catch the culprit in action.',
