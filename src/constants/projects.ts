@@ -30,6 +30,7 @@ export interface ProjectFilter {
 
 export const PROJECT_FILTERS: ProjectFilter[] = [
   { label: 'All Projects', value: 'all' },
+  { label: 'AI', value: 'ai' },
   { label: 'Automation', value: 'automation' },
   { label: 'Software', value: 'software' },
   { label: 'Personal', value: 'personal' }
@@ -58,16 +59,16 @@ export const PROJECT_DATA: Project[] = [
   },
   {
     title: 'Diller Queen',
-    subtitle: 'Browser Arcade Game',
-    description: 'Playable 4v4 multiplayer browser arcade game inspired by Killer Queen. Custom game engine with server-authoritative physics, WebSocket networking, and pixel art sprites.',
+    subtitle: 'Multiplayer Browser Arcade Game',
+    description: '4v4 multiplayer browser arcade game inspired by Killer Queen, built in Godot 4.3 with server-authoritative networking. Players compete as pickles across three simultaneous win conditions with client-side prediction and interpolation for smooth 60fps gameplay.',
     image: null,
     media: [],
-    technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Game Design'],
+    technologies: ['Godot 4.3', 'GDScript', 'FastAPI', 'WebSocket', 'PostgreSQL', 'Docker'],
     achievements: [
-      'Custom game engine with server-authoritative state',
-      'Real-time multiplayer via WebSockets',
-      'Original pixel art character sprites and animations',
-      'Three simultaneous win conditions'
+      'Server-authoritative physics at 20 tick/sec with client prediction',
+      'Real-time 8-player multiplayer via WebSockets',
+      'Original pixel art sprites with role-based animations',
+      'Android APK export for kiosk deployment'
     ],
     github: null,
     externalLink: 'https://dq.darrenarney.com',
@@ -93,6 +94,66 @@ export const PROJECT_DATA: Project[] = [
     demo: null,
     demoType: 'gallery',
     categories: ['software', 'personal'],
+    featured: false,
+    year: 2026
+  },
+  {
+    title: 'Sprite Forge',
+    subtitle: 'AI Pixel Art Generation Pipeline',
+    description: 'Local AI-powered pixel art sprite generator using Stable Diffusion with pixel-art LoRA via ComfyUI. Features a RAG-assisted prompt builder that retrieves similar sprites from a vector-indexed corpus to improve generation quality and consistency across sprite sheets.',
+    image: null,
+    media: [],
+    technologies: ['React', 'TypeScript', 'ComfyUI', 'Stable Diffusion', 'PostgreSQL', 'pgvector', 'Ollama', 'Docker'],
+    achievements: [
+      'Hybrid retrieval (70% vector / 30% full-text) for reference-driven generation',
+      'Failure pattern analysis to iteratively improve prompts',
+      'Corpus management with rating, tagging, and component metadata',
+      'Real-time WebSocket updates during generation'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['ai', 'software'],
+    featured: true,
+    year: 2026
+  },
+  {
+    title: 'GBGreg',
+    subtitle: 'Local AI Intelligence Platform',
+    description: 'Domain-specific AI platform that ingests structured files, builds a knowledge graph, detects semantic patterns, and enables RAG-powered querying over the extracted intelligence. Runs entirely on local hardware with Ollama for inference and Neo4j for relationship mapping.',
+    image: null,
+    media: [],
+    technologies: ['Vue 3', 'Node.js', 'Neo4j', 'PostgreSQL', 'pgvector', 'Ollama', 'D3.js', 'Docker'],
+    achievements: [
+      'Parses 5 file types with 15+ semantic pattern detectors',
+      'Interactive D3.js graph visualization with ELK layout engine',
+      'Variable flow tracing across 93+ operations',
+      'Fully local inference — no cloud API dependencies'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['ai', 'software'],
+    featured: true,
+    year: 2026
+  },
+  {
+    title: 'Podcast Factory',
+    subtitle: 'Automated Article-to-Podcast Pipeline',
+    description: 'Automated pipeline that pulls articles from RSS feeds, summarizes them with a local LLM, converts to natural speech via Kokoro TTS, and publishes as a podcast feed. Runs on a schedule with zero manual intervention.',
+    image: null,
+    media: [],
+    technologies: ['Python', 'Kokoro TTS', 'FreshRSS', 'Ollama', 'systemd', 'Docker'],
+    achievements: [
+      'End-to-end automation from RSS to published podcast',
+      'Local TTS at 2.5x realtime on CPU with 54 voice options',
+      'Scheduled generation via systemd timers',
+      'Self-hosted feed served at a custom domain'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['ai', 'software'],
     featured: false,
     year: 2026
   },
