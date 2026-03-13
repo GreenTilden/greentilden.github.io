@@ -40,15 +40,15 @@ export const PROJECT_DATA: Project[] = [
   {
     title: 'Homelab Infrastructure Cluster',
     subtitle: 'Self-Hosted Cloud Platform',
-    description: 'Two-node Proxmox cluster running 20+ containerized services with SSO, monitoring, VPN, and GPU-accelerated AI inference. Full infrastructure-as-code approach with automated backups and ZFS storage.',
+    description: 'Two-node Proxmox cluster running 20+ containerized services with SSO, self-hosted Headscale VPN, GPU-accelerated AI inference on RTX 5070 Ti, and full infrastructure monitoring. Includes reverse proxy with Let\'s Encrypt, ZFS storage, and automated backups.',
     image: null,
     media: [],
-    technologies: ['Proxmox', 'Docker', 'Nginx', 'ZFS', 'Authelia', 'n8n'],
+    technologies: ['Proxmox', 'Docker', 'Nginx', 'Caddy', 'ZFS', 'Authelia', 'Headscale', 'Prometheus'],
     achievements: [
-      '20+ services across LXC containers and Docker',
-      'SSO authentication with Authelia OIDC',
-      'GPU passthrough for AI inference workloads',
-      'Automated monitoring and alerting with Uptime Kuma'
+      '20+ services across LXC containers and Docker stacks',
+      'Self-hosted Headscale VPN with subnet routing for remote access',
+      'RTX 5070 Ti GPU passthrough running 4 concurrent LLM models',
+      'SSO authentication with Authelia OIDC across all services'
     ],
     github: null,
     demo: null,
@@ -71,7 +71,6 @@ export const PROJECT_DATA: Project[] = [
       'Android APK export for kiosk deployment'
     ],
     github: null,
-    externalLink: 'https://dq.darrenarney.com',
     demoType: 'interactive',
     categories: ['software', 'personal'],
     featured: true,
@@ -100,15 +99,15 @@ export const PROJECT_DATA: Project[] = [
   {
     title: 'Sprite Forge',
     subtitle: 'AI Pixel Art Generation Pipeline',
-    description: 'Local AI-powered pixel art sprite generator using Stable Diffusion with pixel-art LoRA via ComfyUI. Features a RAG-assisted prompt builder that retrieves similar sprites from a vector-indexed corpus to improve generation quality and consistency across sprite sheets.',
+    description: 'AI-powered pixel art sprite generator using SDXL with pixel-art LoRA via ComfyUI, running on local GPU. Features IP-Adapter for character identity consistency, a RAG-assisted prompt builder using pgvector retrieval, and a post-processing pipeline that quantizes 1024px renders down to 64px game-ready sprites.',
     image: null,
     media: [],
-    technologies: ['React', 'TypeScript', 'ComfyUI', 'Stable Diffusion', 'PostgreSQL', 'pgvector', 'Ollama', 'Docker'],
+    technologies: ['Express', 'TypeScript', 'ComfyUI', 'SDXL', 'IP-Adapter', 'PostgreSQL', 'pgvector', 'Ollama', 'Docker'],
     achievements: [
+      'SDXL generation with pixel-art LoRA and IP-Adapter for style consistency',
+      'Post-processing pipeline: 1024px → 64px quantization for game-ready sprites',
       'Hybrid retrieval (70% vector / 30% full-text) for reference-driven generation',
-      'Failure pattern analysis to iteratively improve prompts',
-      'Corpus management with rating, tagging, and component metadata',
-      'Real-time WebSocket updates during generation'
+      'Per-project configuration with corpus management and component metadata'
     ],
     github: null,
     demo: null,
@@ -119,16 +118,16 @@ export const PROJECT_DATA: Project[] = [
   },
   {
     title: 'GBGreg',
-    subtitle: 'Local AI Intelligence Platform',
-    description: 'Domain-specific AI platform that ingests structured files, builds a knowledge graph, detects semantic patterns, and enables RAG-powered querying over the extracted intelligence. Runs entirely on local hardware with Ollama for inference and Neo4j for relationship mapping.',
+    subtitle: 'Virtual Applications Scientist Platform',
+    description: 'AI-powered laboratory automation intelligence platform with embedded expert judgment, modern C# code generation, and equipment safety validation. Features a 30-stage composable RAG pipeline, Neo4j knowledge graph, and 4 concurrent local LLM models running on GPU for domain-specific querying and pattern detection.',
     image: null,
     media: [],
-    technologies: ['Vue 3', 'Node.js', 'Neo4j', 'PostgreSQL', 'pgvector', 'Ollama', 'D3.js', 'Docker'],
+    technologies: ['Vue 3', 'Express', 'TypeScript', 'Neo4j', 'PostgreSQL', 'pgvector', 'Ollama', 'D3.js', 'Docker'],
     achievements: [
-      'Parses 5 file types with 15+ semantic pattern detectors',
-      'Interactive D3.js graph visualization with ELK layout engine',
-      'Variable flow tracing across 93+ operations',
-      'Fully local inference — no cloud API dependencies'
+      '30-stage composable RAG pipeline with 6 specialized profiles',
+      '100% schema consolidation across 30+ database tables',
+      'FAT remediation system with 126-item scorecard template',
+      '4 concurrent LLM models on GPU — fully local inference'
     ],
     github: null,
     demo: null,
@@ -138,23 +137,63 @@ export const PROJECT_DATA: Project[] = [
     year: 2026
   },
   {
-    title: 'Podcast Factory',
-    subtitle: 'Automated Article-to-Podcast Pipeline',
-    description: 'Automated pipeline that pulls articles from RSS feeds, summarizes them with a local LLM, converts to natural speech via Kokoro TTS, and publishes as a podcast feed. Runs on a schedule with zero manual intervention.',
+    title: 'Articles Digest',
+    subtitle: 'AI-Powered Article Summarization Pipeline',
+    description: 'Automated pipeline that ingests articles from RSS feeds via FreshRSS, summarizes them with a local LLM using multiple summarization modes, and delivers personalized daily digests. Per-user configuration with contextual, key-point, and full-narration summary styles.',
     image: null,
     media: [],
-    technologies: ['Python', 'Kokoro TTS', 'FreshRSS', 'Ollama', 'systemd', 'Docker'],
+    technologies: ['FastAPI', 'Vue 3', 'PostgreSQL', 'FreshRSS', 'Ollama', 'Docker'],
     achievements: [
-      'End-to-end automation from RSS to published podcast',
-      'Local TTS at 2.5x realtime on CPU with 54 voice options',
-      'Scheduled generation via systemd timers',
-      'Self-hosted feed served at a custom domain'
+      'Three summarization modes: key points, contextual summary, full narration',
+      'Per-user YAML configuration for personalized digest feeds',
+      'End-to-end automation from RSS ingestion to delivered summaries',
+      'Local LLM inference with no cloud API dependencies'
     ],
     github: null,
     demo: null,
     demoType: 'gallery',
     categories: ['ai', 'software'],
     featured: false,
+    year: 2026
+  },
+  {
+    title: 'Casey Junior',
+    subtitle: 'Project Automation & Ops Platform',
+    description: 'Automated project management platform built for founder-operators. Features a Three-Pillar kanban system (Professional/Personal/Domestic), voice recording pipeline with local STT and LLM intent extraction, AI-generated daily newspaper briefings, and a 5-phase Tiger Team deployment lifecycle tracker with traceability gates.',
+    image: null,
+    media: [],
+    technologies: ['FastAPI', 'Python', 'Ollama', 'OpenAI Whisper', 'PostgreSQL', 'Docker'],
+    achievements: [
+      '5-phase Tiger Team deployment lifecycle with enforced traceability gates',
+      'Voice-to-intent pipeline: STT → LLM analysis → automated task extraction',
+      'AI-generated AM/PM newspaper briefings via local Ollama',
+      'Service registry with live health checks across 20+ services'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['ai', 'software'],
+    featured: true,
+    year: 2026
+  },
+  {
+    title: 'DArnTech Ops Dashboard',
+    subtitle: 'Consulting Operations Hub',
+    description: 'Unified operations dashboard for a consulting entity, serving as the single source of truth for project status, financial health, R&D tracking, and decision gates across 6+ child projects. Integrates financial APIs, Nextcloud CalDAV, and homelab infrastructure monitoring.',
+    image: null,
+    media: [],
+    technologies: ['Vue 3', 'TypeScript', 'FastAPI', 'PostgreSQL', 'CalDAV', 'Docker'],
+    achievements: [
+      'Unified oversight across 6+ active child projects',
+      'Financial gates with goals, risks, expenses, and scenario modeling',
+      'R&D hour tracking for tax credit documentation',
+      'Task and calendar sync via Nextcloud CalDAV integration'
+    ],
+    github: null,
+    demo: null,
+    demoType: 'gallery',
+    categories: ['software'],
+    featured: true,
     year: 2026
   },
   {
